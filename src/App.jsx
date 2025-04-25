@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PublicRoute from "./routes/PublicRoute";
-import LandingPage from "./pages/LandingPage";
 
 const App = () => {
   return (
@@ -9,7 +8,7 @@ const App = () => {
       <Routes>
         {/* Public Routes for Unauthenticated Users */}
         <Route element={<PublicRoute />}>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<h1>Home</h1>} />
           <Route path="/signin" element={<h1>Signin</h1>} />
           <Route path="/signup" element={<h1>Signup</h1>} />
         </Route>
