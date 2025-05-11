@@ -24,9 +24,6 @@ const App = () => {
         <Route element={<Layout />}>
           {/* Informational pages */}
           <Route path="/about" element={<h1>About Page</h1>} />
-          <Route path="/privacy-policy" element={<h1>Privacy Policy Page</h1>} />
-          <Route path="/terms-of-service" element={<h1>Terms Of Services Page</h1>} />
-          <Route path="/pricing" element={<h1>Pricing Page</h1>} />
 
           {/* Public Only Routes - Only for non-authenticated users */}
           <Route element={<PublicRoute />}>
@@ -39,7 +36,6 @@ const App = () => {
           {/* Protected Routes - Only for authenticated users */}
           <Route element={<ProtectedRoute />}>
             <Route path="/home" element={<h1>Home Page</h1>} />
-            <Route path="/dashboard" element={<h1>Dashboard Page</h1>} />
           </Route>
 
           {/* Catch-All Route */}
